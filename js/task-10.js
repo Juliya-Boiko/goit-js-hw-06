@@ -8,21 +8,17 @@ const refs = {
   boxesContainer: document.getElementById('boxes')
 }
 
-const boxProperties = {
-  width: 30,
-  height: 30
-}
+let boxSize = 30;
 
 function createBoxes() {
   const inputValue = +document.getElementById('controls').children[0].value;
   for (let i = 0; i < inputValue; i++) {
     const box = document.createElement('div');
-    box.style.width = boxProperties.width + 'px';
-    box.style.height = boxProperties.height + 'px';
+    box.style.width = boxSize + 'px';
+    box.style.height = boxSize + 'px';
     box.style.backgroundColor = getRandomHexColor();
     refs.boxesContainer.append(box);
-    boxProperties.width += 10;
-    boxProperties.height += 10;
+    boxSize += 10;
   }
 }
 
