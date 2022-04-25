@@ -24,6 +24,7 @@ function createBoxes() {
 
 function destroyBoxes() {
   refs.boxesContainer.innerHTML = '';
+  boxSize = 30;
 }
 
 refs.createBtn.addEventListener('click', createBoxes);
